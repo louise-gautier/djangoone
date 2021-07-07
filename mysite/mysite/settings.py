@@ -85,7 +85,7 @@ DATABASES = {
         'PASSWORD': '2930445djangodb',
         # For MySQL, set 'PORT': '3306' instead of the following. Any Cloud
         # SQL Proxy instances running locally must also be set to tcp:3306.
-        'PORT': '5433',
+        'PORT': '5432',
     }
 }
 # In the flexible environment, you connect to CloudSQL using a unix socket.
@@ -95,7 +95,12 @@ DATABASES['default']['HOST'] = '/cloudsql/core-rite-318609:europe-west3:djangodb
 if os.getenv('GAE_INSTANCE'):
     pass
 else:
-    DATABASES['default']['HOST'] = '127.0.0.1'
+    DATABASES = {
+        'default': {
+            'HOST': '127.0.0.1',
+            'PORT': '5433',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
