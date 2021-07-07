@@ -79,7 +79,7 @@ if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
     # the unix socket at /cloudsql/<your-cloudsql-connection string>
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'ENGINE': 'django.db.backends.postgresql',
             'HOST': '/cloudsql/core-rite-318609:europe-west3:djangodb',
             'NAME': 'djangodb1',
             'USER': 'djangodbuser',
