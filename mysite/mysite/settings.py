@@ -97,6 +97,10 @@ if os.getenv('GAE_INSTANCE'):
 else:
     DATABASES = {
         'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'djangodb1',
+            'USER': 'djangodbuser',
+            'PASSWORD': '2930445djangodb',
             'HOST': '127.0.0.1',
             'PORT': '5433',
         }
