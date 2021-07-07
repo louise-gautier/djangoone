@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)o8y=h#aj_#rrf0jo$@6_d2gtv+5a6^=w3&@o-m!8)o*^1t9wx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['core-rite-318609.ey.r.appspot.com']
+ALLOWED_HOSTS = ['core-rite-318609.ey.r.appspot.com', '127.0.0.1']
 
 # Application definition
 
@@ -85,7 +85,7 @@ DATABASES = {
         'PASSWORD': '2930445djangodb',
         # For MySQL, set 'PORT': '3306' instead of the following. Any Cloud
         # SQL Proxy instances running locally must also be set to tcp:3306.
-        'PORT': '5432',
+        'PORT': '5433',
     }
 }
 # In the flexible environment, you connect to CloudSQL using a unix socket.
